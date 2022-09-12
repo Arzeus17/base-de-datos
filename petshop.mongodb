@@ -1,0 +1,84 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'PetShop';
+const collection1 = 'Clientes';
+const collection2 = 'Produtos';
+
+// The current database to use.
+use('Petshop');
+db.Clientes.insertMany(
+  [
+    {nome: "Luis", sobrenome:"Suarez", telefone:"999-1234", endereco:"Rua Brasil, 217"},
+    {nome: "Maria", sobrenome:"Nunes", telefone:"999-9742", endereco:"Rua Tavares, 119"},
+    {nome: "Luis", sobrenome:"Rondon", telefone:"999-3672", endereco:"Rua Dias, 215"},
+    {nome: "Jose", sobrenome:"Rodrigues", telefone:"999-6788", endereco:"Rua Silveira, 33"},
+    {nome: "Daniel", sobrenome:"Barbosa", telefone:"999-1178", endereco:"Rua Paulo Otavio, 26"},
+    {nome: "Ana", sobrenome:"Rodrigues", telefone:"999-3578", endereco:"Rua Italia, 2111"},
+    {nome: "Raquel", sobrenome:"Brito", telefone:"999-4723", endereco:"Rua Noronha, 2456"},
+    {nome: "Rafael", sobrenome:"Freitas", telefone:"999-1212", endereco:"Rua Cassino, 247"},
+    {nome: "Diego", sobrenome:"Costa", telefone:"999-3729", endereco:"Rua Capellari, 18"},
+    {nome: "Camila", sobrenome:"Teixeira", telefone:"999-9444", endereco:"Rua Oliveira, 197"},
+  ]
+)
+
+use('Petshop');
+db.Produtos.insertMany(
+  [
+    {nome: "Ração Three Dogs Original Frango, Carne e Arroz para Cães", marca:	"Three Dogs", tipo:	"Adultos", preco:	296.79, imagen: "https://www.petlove.com.br/images/products/220639/large/Ra%C3%A7%C3%A3o_Three_Dogs_Original_Frango__Carne_e_Arroz_para_C%C3%A3es_Adultos_Ra%C3%A7as_M%C3%A9dias_e_Grandes_2064399.jpg?1627706173"},
+    {nome: "Ração Three Dogs Original Frango, Carne e Arroz para Cães", marca:	"Three Dogs", tipo:	"Adultos", preco:	256.9,  imagen:"https://www.petlove.com.br/images/products/220639/large/Ra%C3%A7%C3%A3o_Three_Dogs_Original_Frango__Carne_e_Arroz_para_C%C3%A3es_Adultos_Ra%C3%A7as_M%C3%A9dias_e_Grandes_2064399.jpg?1627706173"},
+    {nome: "Ração Three Dogs Original Frango, Carne e Arroz para Cães", marca:	"Three Dogs", tipo:	"Filhotes", preco:	238.41,  imagen:"https://a-static.mlcdn.com.br/1500x1500/racao-three-dogs-premium-especial-original-caes-filhotes-racas-medias-e-grandes-frango-carne-e-arroz/portaldosbichoss/348-531/b85c9e7e4090e0f7090db63dd390e61f.jpg"},
+    {nome: "Ração Three Dogs Original Frango, Carne e Arroz para Cães", marca:	"Three Dogs", tipo:	"Adultos", preco:	231.21,  imagen:"https://www.petlove.com.br/images/products/220643/product/Ra%C3%A7%C3%A3o_Three_Dogs_Original_Frango__Carne_e_Arroz_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_e_Mini_2064432.jpg?1627706192"},
+    {nome: "Ração Seca Quatree Life Frango e Arroz para Cães", marca:	"Quatree", tipo:	"Adultos", preco:	267.9,  imagen:"https://www.petlove.com.br/images/products/224129/large/Ra%C3%A7%C3%A3o_Seca_Quatree_Life_Frango_e_Arroz_C%C3%A3es_Adultos_Ra%C3%A7as_M%C3%A9dias_e_Grandes_2498260.jpg?1627718235"},
+    {nome: "Ração Seca Quatree Life Frango e Arroz para Cães", marca:	"Quatree", tipo:	"Filhotes", preco:	216.99,  imagen:"https://www.petlove.com.br/images/products/224143/large/Ra%C3%A7%C3%A3o_Seca_Quatree_Life_Frango_e_Arroz_C%C3%A3es_Filhotes_Ra%C3%A7as_M%C3%A9dias_e_Grandes_2498258.jpg?1627718301"},
+    {nome: "Ração Seca Quatree Life Frango e Arroz para Cães", marca:	"Quatree", tipo:	"Adultos", preco:	204.99,  imagen:"https://www.petlove.com.br/images/products/224129/large/Ra%C3%A7%C3%A3o_Seca_Quatree_Life_Frango_e_Arroz_C%C3%A3es_Adultos_Ra%C3%A7as_M%C3%A9dias_e_Grandes_2498260.jpg?1627718235"},
+    {nome: "Ração Seca Quatree Life Frango e Arroz para Cães", marca:	"Quatree", tipo:	"Adultos", preco:	144.9,  imagen:"https://www.petlove.com.br/images/products/224136/large/Ra%C3%A7%C3%A3o_Seca_Quatree_Life_Frango_e_Arroz_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_2498259.jpg?1627718266"},
+    {nome: "Ração Seca PremieR Pet Golden Formula Frango e Arroz para Cães", marca:	"GoldeN", tipo:	"Adultos", preco:	210.9,  imagen:"https://cobasi.vteximg.com.br/arquivos/ids/821822/racao-golden-formula-para-caes-adultos-frango-e-arroz-20kg.jpg?v=637667973195500000"},
+    {nome: "Ração Seca PremieR Pet Golden Formula Frango e Arroz para Cães", marca:	"GoldeN", tipo:	"Filhotes", preco:	173.9,  imagen:"https://cobasi.vteximg.com.br/arquivos/ids/942109/racao-golden-fomula-caes-filhotes-frango-e-arroz-3627208-15kg-lado.jpg?v=637866032237800000"},
+    {nome: "Ração Seca PremieR Pet Golden Formula Frango e Arroz para Cães", marca:	"GoldeN", tipo:	"Adultos", preco:	164.9,  imagen:"https://www.petlove.com.br/images/products/223496/large/Ra%C3%A7%C3%A3o_Premier_Golden_Formula_C%C3%A3es_Adultos_Salm%C3%A3o_e_Arroz_3108217_15KG.jpg?1627716202"},
+    {nome: "Ração Seca PremieR Pet Golden Formula Frango e Arroz para Cães", marca:	"GoldeN", tipo:	"Adultos", preco:	162.9,  imagen:"https://www.petlove.com.br/images/products/261675/large/Ra%C3%A7%C3%A3o_Seca_PremieR_Pet_Golden_Formula_C%C3%A3es_Adultos_Frango_e_Arroz_Mini_Bits_-_15_Kg_31021721-3.jpg?1662032586"},
+    {nome: "Ração Seca Pedigree Carne e Vegetais para Cães", marca:	"Pedigree", tipo:	"Filhotes", preco:	298.99,  imagen:"https://www.petlove.com.br/images/products/259805/large/Ra%C3%A7%C3%A3o_Pedigree_Carne_Frango_e_Cereais_C%C3%A3es_Filhotes_15_kg_3104813-4.png?1659451683"},
+    {nome: "Ração Seca Pedigree Carne e Vegetais para Cães", marca:	"Pedigree", tipo:	"Adultos", preco:	272.99,  imagen:"https://www.petlove.com.br/images/products/259785/large/Ra%C3%A7%C3%A3o_Pedigree_Carne_e_Vegetais_C%C3%A3es_Adultos_Ra%C3%A7as_M%C3%A9dias_e_Grandes_20_kg_3104862-5.png?1659449156"},
+    {nome: "Ração Seca Pedigree Carne e Vegetais para Cães", marca:	"Pedigree", tipo:	"Adultos", preco:	189.99,  imagen:"https://cobasi.vteximg.com.br/arquivos/ids/995627-400-400"},
+    {nome: "Ração Seca Pedigree Carne e Vegetais para Cães", marca:	"Pedigree", tipo:	"Adultos", preco:	182.99,  imagen:"https://www.petlove.com.br/images/products/259784/large/Ra%C3%A7%C3%A3o_Pedigree_Carne_e_Vegetais_C%C3%A3es_Adultos_Ra%C3%A7as_M%C3%A9dias_e_Grandes_15_kg_3104862-4.png?1659449076"},
+    {nome: "Ração Seca Nutrilus Pro Frango & Carne para Cães", marca:	"Nutrilus Pro", tipo:	"Adultos", preco:	180.41,  imagen:"https://www.petlove.com.br/images/products/250507/large/2492303_FRENTE.jpg?1635780028"},
+    {nome: "Ração Seca Nutrilus Pro Frango & Carne para Cães", marca:	"Nutrilus Pro", tipo:	"Filhotes", preco:	152.91,  imagen:"https://www.petlove.com.br/images/products/250509/large/2616890_FRENTE.jpg?1635780347"},
+    {nome: "Ração Seca Nutrilus Pro Frango & Carne para Cães", marca:	"Nutrilus Pro", tipo:	"Adultos", preco:	144.81,  imagen:"https://www.petlove.com.br/images/products/250511/large/2616989_FRENTE.jpg?1635780581"},
+    {nome: "Ração Seca Nutrilus Pro Frango & Carne para Cães", marca:	"Nutrilus Pro", tipo:	"Adultos", preco:	139.56,  imagen:"https://www.petlove.com.br/images/products/250504/large/2492302_FRENTE.jpg?1635779700"},
+    {nome: "Ração Seca Nestlé Purina Pro Plan Frango para Cães", marca:	"Purina Pro Plan", tipo:	"Filhotes", preco:	326.09,  imagen:"https://www.petlove.com.br/images/products/230268/large/Ra%C3%A7%C3%A3o_Seca_Nestl%C3%A9_Purina_Pro_Plan_Frango_C%C3%A3es_Filhotes_Ra%C3%A7as_M%C3%A9dias_3101179_15kg.jpg?1627734517"},
+    {nome: "Ração Seca Nestlé Purina Pro Plan Frango para Cães", marca:	"Purina Pro Plan", tipo:	"Adultos", preco:	312.69,  imagen:"https://www.petlove.com.br/images/products/230249/large/Ra%C3%A7%C3%A3o_Seca_Nestl%C3%A9_Purina_Pro_Plan_Frango_C%C3%A3es_Adultos_Ra%C3%A7as_M%C3%A9dias_3105259_15.jpg?1627734333"},
+    {nome: "Ração Seca Nestlé Purina Pro Plan Frango para Cães", marca:	"Purina Pro Plan", tipo:	"Adultos", preco:	246.99,  imagen:"https://www.petlove.com.br/images/products/230256/large/Ra%C3%A7%C3%A3o_Seca_Nestl%C3%A9_Purina_Pro_Plan_Frango_para_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_1603363_7_5kg.jpg?1627734396"},
+    {nome: "Ração Seca Nestlé Purina Dog Chow Extra Life Carne, Frango e Arroz para Cães", marca:	"Purina Dog Chow", tipo:	"Adultos", preco:	249.59,  imagen:"https://www.petlove.com.br/images/products/250582/large/Ra%C3%A7%C3%A3o_Seca_Nestl%C3%A9_Purina_Dog_Chow_Extra_Life_Carne__Frango_e_Arroz_C%C3%A3es_Adultos_Ra%C3%A7as_M%C3%A9dias_e_Grandes_-_20_Kg_2737312_%2815%29.jpg?1635867082"},
+    {nome: "Ração Seca Nestlé Purina Dog Chow Extra Life Carne, Frango e Arroz para Cães", marca:	"Purina Dog Chow", tipo:	"Adultos", preco:	210.35,  imagen:"https://www.petlove.com.br/images/products/251643/product/DogChow.jpg?1641229181"},
+    {nome: "Ração Seca Nestlé Purina Dog Chow Extra Life Carne, Frango e Arroz para Cães", marca:	"Purina Dog Chow", tipo:	"Filhotes", preco:	190.49,  imagen:"https://www.petlove.com.br/images/products/250376/large/Ra%C3%A7%C3%A3o_Seca_Nestl%C3%A9_Purina_Dog_Chow_Extra_Life_Frango_e_Arroz_C%C3%A3es_Filhotes_Todas_as_Ra%C3%A7as_-_15_Kg_1212372_%285%29.jpg?1635533827"},
+    {nome: "Ração Seca Nestlé Purina Dog Chow Extra Life Carne, Frango e Arroz para Cães", marca:	"Purina Dog Chow", tipo:	"Adultos", preco:	180.99,  imagen:"https://www.petlove.com.br/images/products/250345/large/Ra%C3%A7%C3%A3o_Seca_Nestl%C3%A9_Purina_Dog_Chow_Extra_Life_Carne__Frango_e_Arroz_C%C3%A3es_Adultos_Ra%C3%A7as_Minis_e_Pequenas_-_15_Kg_1212366_16.jpg?1635531355"},
+    {nome: "Ração Premier Pet Formula para Cães", marca:	"PremieR", tipo: "Adultos", preco:	316.9,  imagen:"https://www.petlove.com.br/images/products/261749/large/Ra%C3%A7%C3%A3o_Premier_Pet_Formula_Frango_C%C3%A3es_Adultos_Ra%C3%A7as_M%C3%A9dias_-_20_Kg_3108232-3.jpg?1662043155"},
+    {nome: "Ração Premier Pet Formula para Cães", marca:	"PremieR", tipo:	"Adultos", preco:	285.21,  imagen:"https://www.petlove.com.br/images/products/261743/large/Ra%C3%A7%C3%A3o_Premier_Pet_Formula_C%C3%A3es_Adultos_Ra%C3%A7as_Pequenas_-_15_Kg_3108224-4_3.jpg?1662042944"},
+    {nome: "Ração Premier Pet Formula para Cães", marca:	"PremieR", tipo:	"Filhotes", preco:	259.9,  imagen:"https://www.petlove.com.br/images/products/261617/large/Ra%C3%A7%C3%A3o_Premier_Pet_Formula_C%C3%A3es_Filhotes_Ra%C3%A7as_Grandes_e_Gigantes_Frango_3108282_4.jpg?1662029599"},
+    {nome: "Ração Premier Pet Formula para Cães", marca:	"PremieR", tipo:	"Adultos", preco:	244.9,  imagen:"https://www.petlove.com.br/images/products/261778/large/Ra%C3%A7%C3%A3o_Premier_Pet_Formula_C%C3%A3es_Adultos_Ra%C3%A7as_Grandes_e_Gigantes_Frango_-_15_Kg_3108281_2.jpg?1662045065"},
+    {nome: "Ração GranPlus Menu Raças Pequenas Frango e Arroz para Cães", marca:	"GranPlus", tipo:	"Adultos", preco:	201.9,  imagen:"https://www.petlove.com.br/images/products/208188/large/Ra%C3%A7%C3%A3o_Affinity_PetCare_Gran_Plus_Menu_Frango_e_Arroz_para_C%C3%A3es_Adultos_31021655_1.jpg?1627667402"},
+    {nome: "Ração GranPlus Menu Raças Pequenas Frango e Arroz para Cães", marca:	"GranPlus", tipo:	"Adultos", preco:	156.9,  imagen:"https://www.petlove.com.br/images/products/208188/large/Ra%C3%A7%C3%A3o_Affinity_PetCare_Gran_Plus_Menu_Frango_e_Arroz_para_C%C3%A3es_Adultos_31021655_1.jpg?1627667402"},
+    {nome: "Ração GranPlus Menu Raças Pequenas Frango e Arroz para Cães", marca:	"GranPlus", tipo:	"Adultos", preco:	141.21,  imagen:"https://cobasi.vteximg.com.br/arquivos/ids/861572-400-400/racao-adulto-mini-frango-e-arroz-gran-plus-1kg-frente.jpg?v=637707883613870000"},
+    {nome: "Ração GranPlus Menu Raças Pequenas Frango e Arroz para Cães", marca:	"GranPlus", tipo:	"Filhotes", preco:	128.9,  imagen:"https://www.petlove.com.br/images/products/208211/large/Ra%C3%A7%C3%A3o_Affinity_PetCare_Gran_Plus_Menu_Ra%C3%A7as_Pequenas_Frango_e_Arroz_para_C%C3%A3es_Filhotes_3109100_10_1kg_.jpg?1627667488"},
+    {nome: "Ração Fórmula Natural Life Super Premium para Cães", marca:	"Fórmula Natural", tipo:	"Filhotes", preco:	289.9,  imagen:"https://www.petlove.com.br/images/products/243605/large/1_3107910_Ra%C3%A7%C3%A3o-F%C3%B3rmula-Natural-Super-Premium-para-C%C3%A3es-Filhotes-Ra%C3%A7as-M%C3%A9dias-e-Grandes.jpg?1628875553"},
+    {nome: "Ração Fórmula Natural Life Super Premium para Cães", marca:	"Fórmula Natural", tipo:	"Adultos", preco:	275.9,  imagen:"https://www.petlove.com.br/images/products/243589/large/1_2030763_Ra%C3%A7%C3%A3o_F%C3%B3rmula_Natural_Super_Premium_para_C%C3%A3es_Adultos_de_Ra%C3%A7as_M%C3%A9dia_e_Grande.jpg?1628868413"},
+    {nome: "Ração Fórmula Natural Life Super Premium para Cães", marca:	"Fórmula Natural", tipo:	"Adultos", preco:	275.9,  imagen:"https://www.petlove.com.br/images/products/243631/large/1_3107895_Ra%C3%A7%C3%A3o-F%C3%B3rmula-Natural-Super-Premium-para-C%C3%A3es-Adultos-Ra%C3%A7as-Mini-e-Pequena.jpg?1628875695"},
+  ]
+)
+
+use('Petshop');
+db.Clientes.find()
+
+use('Petshop');
+db.Produtos.find()
+
+use('Petshop');
+db.Clientes.find(
+  {sobrenome:"Rodrigues"}
+)
+
+use('Petshop');
+db.Clientes.find(
+  {endereco:"Rua Brasil"}
+)
+
